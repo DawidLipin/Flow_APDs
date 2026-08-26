@@ -1,0 +1,7 @@
+numpy==2.3.4
+matplotlib==3.10.6
+PyAPD==0.1.5
+torch==2.9.0
+torch-geometric==2.7.0
+torch-cluster==1.6.3
+jupyterlab==4.4.9

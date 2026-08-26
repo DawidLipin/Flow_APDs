@@ -1,0 +1,14 @@
+{
+  "artifacts": [
+    {
+      "path": "model_for_testing/model_256hd_3ly_16knn_100_500_N100.pt",
+      "sha256": "b6febdcddeeca7e2334337ae339d5af160baed5cc759681a2901ce701a3d448b",
+      "size": 15772298,
+      "parts": [
+        "model_for_testing/model_256hd_3ly_16knn_100_500_N100.pt.part-000",
+        "model_for_testing/model_256hd_3ly_16knn_100_500_N100.pt.part-001",
+        "model_for_testing/model_256hd_3ly_16knn_100_500_N100.pt.part-002"
+      ]
+    }
+  ]
+}

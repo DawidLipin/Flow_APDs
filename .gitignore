@@ -1,0 +1,25 @@
+# OS and editor files
+.DS_Store
+.vscode/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Generated datasets, checkpoints, and scheduler output
+data/
+models/
+*_raw_shards/
+*_data_norm_on_disk/
+slurm-*.out
+slurm-*.err
+
+# Reconstructed from the tracked artifact parts
+model_for_testing/model_256hd_3ly_16knn_100_500_N100.pt
+
+# Generated visualizations
+*.gif
