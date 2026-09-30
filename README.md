@@ -101,7 +101,7 @@ illustration of the first objective.
 
 1. Unguided APD reference: M. Buze, J. Feydy, S. M. Roper, K. Sedighiani, and D. P. Bourne. Anisotropic power diagrams for polycrystal modelling: Efficient generation of curved grains via optimal transport. URL https://www.sciencedirect.com/science/article/pii/S092702562400538X.
 2. 3D-printed steel: Yanis Balit, Eric Charkaluk, and Andrei Constantinescu. Digital image correlation for microstructural analysis of deformation pattern in additively manufactured 316L thin walls. URL https://linkinghub.elsevier.com/retrieve/pii/S2214860419305469.
-3. Cast slab schematic: Robert E. Reed-Hill. Physical Metallurgy Principles. D. Van Nostrand Company.
+3. Cast slab schematic: obert E. Reed-Hill. Physical Metallurgy Principles. D. Van Nostrand Company, New York, 2nd edition, 1973.
 4. Copper weld: Kati Savolainen, Tapio Saukkonen, and Hannu Hänninen. Localization of plastic deformation in copper canisters for spent nuclear fuel. URL https://www.scirp.net/journal/paperinformation?paperid=16567.
 5. Heterogeneous lamella titanium: Xiaolei Wu, Muxin Yang, Fuping Yuan, Guilin Wu, Yujie Wei, Xiaoxu Huang, and Yuntian Zhu. Heterogeneous lamella structure unites ultrafine-grain strength with coarse-grain ductility. URL https://www.pnas.org/doi/abs/10.1073/pnas.1517193112.
 
