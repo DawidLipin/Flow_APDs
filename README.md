@@ -1,6 +1,6 @@
 # Anisotropic power-diagram flow matching
 
-This anonymous research artifact contains the two-dimensional flow-matching
+This repository contains the two-dimensional flow-matching
 model, synthetic data pipeline, trained checkpoint, unguided sampler, and
 training-free guidance experiments used in the accompanying submission.
 
