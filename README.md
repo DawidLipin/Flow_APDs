@@ -2,7 +2,7 @@
 
 This repository contains the two-dimensional flow-matching
 model, synthetic data pipeline, trained checkpoint, unguided sampler, and
-training-free guidance experiments used in the accompanying submission.
+training-free guidance experiments.
 
 The model was trained only on synthetic anisotropic power diagrams (APDs). No
 experimental or real-world sample is present in either training dataset. The
@@ -19,21 +19,18 @@ load them.
 - `model.py`: the C4-equivariant graph architecture and dataset loaders.
 - `train.py`: train or resume the flow-matching model.
 - `sample.py`: run the unguided Euler sampler and inspect its trajectory.
-- `guidance.ipynb`: reproduce only the guidance objectives and experiments
-  reported in the submission.
+- `guidance.ipynb`: reproduce the documented guidance objectives and
+  experiments.
 - `data_for_testing/`: normalization statistics used by the supplied model.
 - `model_for_testing/`: trained weights for the reported 256-wide, three-layer,
   16-neighbour model.
 - `examples_for_guidance/`: reported generated figures and the qualitative
   reference-image column, with source notes.
 
-The paper source and manuscript PDF are deliberately not included.
-
 ## Assemble the supplied checkpoint
 
-The trained weights are split into parts smaller than 8 MB for compatibility
-with anonymous repository mirrors. Reconstruct and verify the checkpoint before
-running an example:
+The trained weights are stored as verified parts. Reconstruct and verify the
+checkpoint before running an example:
 
 ```bash
 python prepare_artifacts.py
@@ -101,13 +98,13 @@ illustration of the first objective.
 
 1. Unguided APD reference: M. Buze, J. Feydy, S. M. Roper, K. Sedighiani, and D. P. Bourne. Anisotropic power diagrams for polycrystal modelling: Efficient generation of curved grains via optimal transport. URL https://www.sciencedirect.com/science/article/pii/S092702562400538X.
 2. 3D-printed steel: Yanis Balit, Eric Charkaluk, and Andrei Constantinescu. Digital image correlation for microstructural analysis of deformation pattern in additively manufactured 316L thin walls. URL https://linkinghub.elsevier.com/retrieve/pii/S2214860419305469.
-3. Cast slab schematic: obert E. Reed-Hill. Physical Metallurgy Principles. D. Van Nostrand Company, New York, 2nd edition, 1973.
+3. Cast slab schematic: Robert E. Reed-Hill. Physical Metallurgy Principles. D. Van Nostrand Company, New York, 2nd edition, 1973.
 4. Copper weld: Kati Savolainen, Tapio Saukkonen, and Hannu Hänninen. Localization of plastic deformation in copper canisters for spent nuclear fuel. URL https://www.scirp.net/journal/paperinformation?paperid=16567.
 5. Heterogeneous lamella titanium: Xiaolei Wu, Muxin Yang, Fuping Yuan, Guilin Wu, Yujie Wei, Xiaoxu Huang, and Yuntian Zhu. Heterogeneous lamella structure unites ultrafine-grain strength with coarse-grain ductility. URL https://www.pnas.org/doi/abs/10.1073/pnas.1517193112.
 
-## Recreate the paper-scale synthetic training set
+## Recreate the full-scale synthetic training set
 
-The reported training set contains 12,000 synthetic APDs with a uniformly
+The training set contains 12,000 synthetic APDs with a uniformly
 sampled number of generators between 100 and 500. This bounded-memory command
 generates raw shards, computes normalization statistics, and creates an on-disk
 dataset:
@@ -119,15 +116,15 @@ python generate_data.py \
   --seed 0 \
   --shard-size 250 \
   --preprocess \
-  --output-dir data/paper
+  --output-dir data/training
 ```
 
-Train the reported architecture for 100 epochs with:
+Train the supplied architecture for 100 epochs with:
 
 ```bash
 python train.py \
-  --data data/paper/12000_N100_500_data_norm_on_disk \
-  --stats data/paper/12000_N100_500_stats.pt \
+  --data data/training/12000_N100_500_data_norm_on_disk \
+  --stats data/training/12000_N100_500_stats.pt \
   --output-dir models \
   --epochs 100 \
   --hidden-dim 256 \
